@@ -4,9 +4,9 @@
     "author": "Phillip Schichtel",
     "license": "GPLv3",
     "summary": "A simple hiera data_hash backend based on IO.popen",
-    "source": "https://github/cubyte-oss/puppet-hiera_popen",
-    "project_page": "https://github/cubyte-oss/puppet-hiera_popen",
-    "issues_url": "https://github/cubyte-oss/puppet-hiera_popen/issues",
+    "source": "https://github.com/cubyte-oss/puppet-hiera_popen",
+    "project_page": "https://github.com/cubyte-oss/puppet-hiera_popen",
+    "issues_url": "https://github.com/cubyte-oss/puppet-hiera_popen/issues",
     "tags": ["cubyte", "hiera"],
     "operatingsystem_support": [
         {
