@@ -15,7 +15,7 @@ Puppet::Functions.create_function(:popen_data) do
 
         raise Puppet::DataBinding::LookupError, 'Empty commandline given!' unless commandline.empty?
 
-        cmd_env = merge_end ? ENV.to_hash.merge(env) : env
+        cmd_env = merge_env ? ENV.to_hash.merge(env) : env
 
         output = IO.popen(cmd_env, commandline, in: :in, :err=>[:child, :out], :chdir=>pwd) do |io|
             io.read
