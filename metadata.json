@@ -1,0 +1,17 @@
+{
+    "name": "cubyte-hiera_popen",
+    "version": "0.0.1",
+    "author": "Phillip Schichtel",
+    "license": "GPLv3",
+    "summary": "A simple hiera data_hash backend based on IO.popen",
+    "source": "https://github/cubyte-oss/puppet-hiera_popen",
+    "project_page": "https://github/cubyte-oss/puppet-hiera_popen",
+    "issues_url": "https://github/cubyte-oss/puppet-hiera_popen/issues",
+    "tags": ["cubyte", "hiera"],
+    "operatingsystem_support": [
+        {
+            "operatingsystem": "Debian"
+        }
+    ],
+    "dependencies": []
+}
