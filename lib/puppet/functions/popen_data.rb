@@ -13,7 +13,7 @@ Puppet::Functions.create_function(:popen_data) do
         merge_env = options.fetch('merge-env', true)
         commandline = options.fetch('commandline', [])
 
-        raise Puppet::DataBinding::LookupError, 'Empty commandline given!' unless commandline.empty?
+        raise Puppet::DataBinding::LookupError, 'Empty commandline given!' if commandline.empty?
 
         cmd_env = merge_env ? ENV.to_hash.merge(env) : env
 
