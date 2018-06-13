@@ -17,9 +17,11 @@ Puppet::Functions.create_function(:popen_data) do
 
         cmd_env = merge_env ? ENV.to_hash.merge(env) : env
 
-        output = IO.popen(cmd_env, commandline, in: :in, :err=>[:child, :out], :chdir=>pwd) do |io|
-            io.read
-        end
+        output = Dir.chdir(pwd) {
+            IO.popen(cmd_env, commandline, in: :in, :err=>[:child, :out]) do |io|
+                io.read
+            end
+        }
 
         raise Puppet::DataBinding::LookupError, "Subprocess returned an error code: #{$?}" unless $?.success?
 
