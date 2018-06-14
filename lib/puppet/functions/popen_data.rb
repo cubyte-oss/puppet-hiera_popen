@@ -18,7 +18,7 @@ Puppet::Functions.create_function(:popen_data) do
         cmd_env = merge_env ? ENV.to_hash.merge(env) : env
 
         output = Dir.chdir(pwd) {
-            IO.popen(cmd_env, commandline, in: :in, :err=>[:child, :out]) do |io|
+            IO.popen(cmd_env, commandline, :err=>[:child, :out]) do |io|
                 io.read
             end
         }
